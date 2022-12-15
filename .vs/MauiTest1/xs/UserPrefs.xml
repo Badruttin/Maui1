@@ -1,13 +1,7 @@
-﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{868ABDF2-8C96-4518-9542-173B02FF104C}|Default">
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_31" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+﻿<Properties StartupConfiguration="{868ABDF2-8C96-4518-9542-173B02FF104C}|Default" GitUserInfo="UsingMD">
   <MonoDevelop.Ide.Workbench ActiveDocument="MauiTest1/MainPage.xaml.cs">
     <Files>
-      <File FileName="MauiTest1/MainPage.xaml.cs" Line="13" Column="3" />
+      <File FileName="MauiTest1/MainPage.xaml.cs" Line="9" Column="23" />
       <File FileName="MauiTest1/MainPage.xaml" />
     </Files>
     <Pads>
@@ -22,7 +16,13 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.1.0.1" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_31" />
   <MonoDevelop.Ide.ItemProperties.MauiTest1 PreferredExecutionTarget="Android.pixel_5_-_api_31" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.1.0.1" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

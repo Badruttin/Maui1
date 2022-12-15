@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiTest1.VidRabotPage"
+             Title="VidRabotPage">
+    <StackLayout>
+    <StackLayout>
+      <Label Text="Имя" />
+      <Entry Text="{Binding Path=Model.Name}" FontSize="Medium" />
+      <Label Text="Электронная почта" />
+      <Entry Text="{Binding Path=Model.ShortName}" FontSize="Medium" />
+      <Label Text="Телефон" />
+      <Entry Text="{Binding Path=Model.Description}" FontSize="Medium" />
+    </StackLayout>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+      <Button Text="Сохранить" Command="{Binding ViewModel.SaveVidrabotCommand}" CommandParameter="{Binding Model}" />
+      <Button Text="Удалить" Command="{Binding ViewModel.DeleteVidRabotCommand}" CommandParameter="{Binding Model}" />
+      <Button Text="Назад" Command="{Binding Path=ViewModel.BackCommand}" />
+    </StackLayout>
+  </StackLayout>
+</ContentPage>

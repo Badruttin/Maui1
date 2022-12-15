@@ -3,40 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiTest1.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
+    <StackLayout>
+    <Button Text="Добавить" Command="{Binding CreateVidRabotCommand}" IsEnabled="{Binding IsLoaded}" />
+    <ListView x:Name="friendsList" ItemsSource="{Binding VidRabots}"
+              SelectedItem="{Binding SelectedVR, Mode=TwoWay}" HasUnevenRows="True">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ViewCell.View>
+              <StackLayout>
+                <Label Text="{Binding Name}" FontSize="Medium" />
+                <Label Text="{Binding ShortName}" FontSize="Small" />
+                <Label Text="{Binding Description}" FontSize="Small" />
+              </StackLayout>
+            </ViewCell.View>
+        </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+    <StackLayout IsVisible="{Binding IsBusy}"
+                    HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="20">
+      <Label Text="Загрузка данных..." TextColor="Gray" HorizontalOptions="Center" />
+      <ActivityIndicator IsRunning="{Binding IsBusy}" Color="Red" >
+      </ActivityIndicator>
+    </StackLayout>
+  </StackLayout>
 
 </ContentPage>
 
